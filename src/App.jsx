@@ -20,7 +20,7 @@ function App() {
         justifyContent: 'center',
         backgroundColor: '#0d0d0d'
       }}>
-        <h1 style={{ fontSize: '3.5em', marginBottom: '10px' }}>Jae</h1>
+        <h1 style={{ fontSize: '3.5em', marginBottom: '10px' }}>James</h1>
         <p style={{ fontSize: '1.2em', color: '#a9a9a9', marginBottom: '40px' }}>Senior Mechatronics and Robotics Technician</p>
         <button style={{
           backgroundColor: '#00f5ff',
