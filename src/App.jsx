@@ -30,7 +30,7 @@ function App() {
     <div className="min-h-screen bg-[#05070a] text-slate-100">
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-6 sm:px-8">
         <a href="/" className="text-lg font-semibold tracking-wide text-white">
-          James Edmonds
+          James Jr
         </a>
         <nav aria-label="Primary navigation" className="flex items-center gap-5 text-sm text-slate-300">
           <a className="transition hover:text-white" href="#work">
@@ -52,7 +52,7 @@ function App() {
               Senior Mechatronics & Robotics Technician
             </p>
             <h1 className="max-w-3xl text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
-              James Edmonds
+              James Jr
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
               Robotics, mechatronics, automation, and industrial controls work focused on keeping complex systems reliable, maintainable, and production-ready.
@@ -125,7 +125,7 @@ function App() {
         <section id="contact" className="border-t border-slate-800 bg-slate-950/70">
           <div className="mx-auto flex max-w-6xl flex-col gap-5 px-5 py-12 sm:px-8 md:flex-row md:items-center md:justify-between">
             <div>
-              <h2 className="text-2xl font-semibold text-white">James Edmonds</h2>
+              <h2 className="text-2xl font-semibold text-white">James Jr</h2>
               <p className="mt-2 text-slate-300">
                 Robotics, mechatronics, automation, and industrial controls portfolio.
               </p>
