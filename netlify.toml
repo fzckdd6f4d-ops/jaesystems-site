@@ -3,6 +3,18 @@
   publish = "dist"
 
 [[redirects]]
+  from = "https://james-edmonds.netlify.app/*"
+  to = "https://james.edmonds.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://james-edmonds.netlify.app/*"
+  to = "https://james.edmonds.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://jaesystems.netlify.app/*"
   to = "https://james.edmonds.dev/:splat"
   status = 301
