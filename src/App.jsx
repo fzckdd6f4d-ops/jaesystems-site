@@ -1,227 +1,147 @@
-import React from 'react';
+const focusAreas = [
+  'Robotics integration',
+  'Automation systems',
+  'PLC and controls troubleshooting',
+  'SAP EAM asset workflows',
+  'Industrial maintenance',
+  'Conveyor and material handling systems',
+];
+
+const projects = [
+  {
+    title: 'Automated Conveyor Systems',
+    description:
+      'Controls-focused automation work for production flow, uptime, and repeatable maintenance procedures.',
+  },
+  {
+    title: 'Robotics Integration',
+    description:
+      'Collaborative and industrial robot support across commissioning, troubleshooting, and production readiness.',
+  },
+  {
+    title: 'Asset Management Workflows',
+    description:
+      'SAP EAM process support for equipment history, maintenance planning, and operational visibility.',
+  },
+];
 
 function App() {
   return (
-    <div style={{
-      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      backgroundColor: '#0d0d0d',
-      color: '#ffffff'
-    }}>
-      {/* Hero Section */}
-      <section style={{
-        flex: 1,
-        padding: '80px 20px',
-        textAlign: 'center',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        backgroundColor: '#0d0d0d'
-      }}>
-        <h1 style={{ fontSize: '3.5em', marginBottom: '10px' }}>James</h1>
-        <p style={{ fontSize: '1.2em', color: '#a9a9a9', marginBottom: '40px' }}>Senior Mechatronics and Robotics Technician</p>
-        <button style={{
-          backgroundColor: '#00f5ff',
-          border: 'none',
-          padding: '12px 30px',
-          borderRadius: '8px',
-          color: '#0d0d0d',
-          fontSize: '1em',
-          cursor: 'pointer',
-          transition: 'background-color 0.3s ease'
-        }} onMouseEnter={(e) => e.target.style.backgroundColor = '#00c2ff'}
-          onMouseLeave={(e) => e.target.style.backgroundColor = '#00f5ff'}>
-          View My Work
-        </button>
-      </section>
+    <div className="min-h-screen bg-[#05070a] text-slate-100">
+      <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-6 sm:px-8">
+        <a href="/" className="text-lg font-semibold tracking-wide text-white">
+          james.edmonds.dev
+        </a>
+        <nav aria-label="Primary navigation" className="flex items-center gap-5 text-sm text-slate-300">
+          <a className="transition hover:text-white" href="#work">
+            Work
+          </a>
+          <a className="transition hover:text-white" href="#focus">
+            Focus
+          </a>
+          <a className="transition hover:text-white" href="#contact">
+            Contact
+          </a>
+        </nav>
+      </header>
 
-      {/* About Section */}
-      <section style={{
-        padding: '60px 20px',
-        textAlign: 'center',
-        backgroundColor: '#1a1a1a'
-      }}>
-        <h2 style={{ color: '#ffffff', marginBottom: '30px' }}>About Me</h2>
-        <p style={{ fontSize: '1.1em', maxWidth: '800px', margin: 'auto', lineHeight: 1.6 }}>
-          With over a decade of experience in mechatronics and robotics, I specialize in automation, controls systems, and industrial maintenance. 
-          My expertise spans from designing robotic solutions to managing complex SAP EAM systems for large-scale manufacturing operations.
-        </p>
-      </section>
-
-      {/* Skills Section */}
-      <section style={{
-        padding: '60px 20px',
-        textAlign: 'center',
-        backgroundColor: '#1a1a1a'
-      }}>
-        <h2 style={{ color: '#ffffff', marginBottom: '40px' }}>Skills</h2>
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'center',
-          gap: '20px'
-        }}>
-          {['Robotics', 'Automation Systems', 'PLC Programming', 'SAP EAM', 'Industrial Controls', 'Conveyor Systems', 'Troubleshooting', 'Maintenance'].map((skill, index) => (
-            <div key={index} style={{
-              backgroundColor: '#2a2a2a',
-              padding: '15px 20px',
-              borderRadius: '8px',
-              color: '#ffffff',
-              fontSize: '1em',
-              border: '1px solid #00f5ff',
-              flex: '1 1 200px'
-            }}>
-              {skill}
+      <main>
+        <section className="mx-auto grid min-h-[calc(100svh-88px)] w-full max-w-6xl items-center gap-10 px-5 pb-14 pt-10 sm:px-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300">
+              Robotics Portfolio
+            </p>
+            <h1 className="max-w-3xl text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
+              james.edmonds.dev
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+              Robotics, mechatronics, automation, and industrial controls work focused on keeping complex systems reliable and production-ready.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <a
+                href="#work"
+                className="rounded-md bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
+              >
+                View Work
+              </a>
+              <a
+                href="https://james.edmonds.dev/"
+                className="rounded-md border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-300 hover:text-cyan-200"
+              >
+                https://james.edmonds.dev
+              </a>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
 
-      {/* Projects Section */}
-      <section style={{
-        padding: '60px 20px',
-        textAlign: 'center',
-        backgroundColor: '#1a1a1a'
-      }}>
-        <h2 style={{ color: '#ffffff', marginBottom: '40px' }}>Projects</h2>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '30px'
-        }}>
-          {[
-            {
-              title: "Automated Conveyor System",
-              description: "Designed and implemented a fully automated conveyor system with PLC controls for a manufacturing plant."
-            },
-            {
-              title: "Robotics Integration",
-              description: "Integrated collaborative robots (cobots) into assembly lines, improving production efficiency by 30%."
-            },
-            {
-              title: "SAP EAM Implementation",
-              description: "Led the implementation of SAP EAM for asset management in a large industrial facility."
-            }
-          ].map((project, index) => (
-            <div key={index} style={{
-              backgroundColor: '#2a2a2a',
-              padding: '20px',
-              borderRadius: '10px',
-              color: '#ffffff',
-              border: '1px solid #3a3a3a'
-            }}>
-              <h3 style={{ marginBottom: '10px' }}>{project.title}</h3>
-              <p>{project.description}</p>
+          <div className="rounded-lg border border-slate-800 bg-slate-950/70 p-6 shadow-2xl shadow-cyan-950/20">
+            <div className="mb-5 flex items-center justify-between border-b border-slate-800 pb-4">
+              <span className="text-sm font-medium text-slate-300">System Focus</span>
+              <span className="rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-300">
+                Online
+              </span>
             </div>
-          ))}
-        </div>
-      </section>
+            <dl className="grid gap-4 text-sm">
+              <div className="flex items-center justify-between gap-6">
+                <dt className="text-slate-400">Domain</dt>
+                <dd className="font-semibold text-white">james.edmonds.dev</dd>
+              </div>
+              <div className="flex items-center justify-between gap-6">
+                <dt className="text-slate-400">Discipline</dt>
+                <dd className="font-semibold text-white">Robotics and Controls</dd>
+              </div>
+              <div className="flex items-center justify-between gap-6">
+                <dt className="text-slate-400">Stack</dt>
+                <dd className="font-semibold text-white">React + Vite</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
 
-      {/* Experience Section */}
-      <section style={{
-        padding: '60px 20px',
-        textAlign: 'center',
-        backgroundColor: '#1a1a1a'
-      }}>
-        <h2 style={{ color: '#ffffff', marginBottom: '40px' }}>Experience</h2>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '30px'
-        }}>
-          {[
-            {
-              company: "Tech Industries Inc.",
-              title: "Senior Mechatronics Technician",
-              duration: "2018 - Present",
-              description: [
-                "Maintained and optimized robotic systems across multiple production lines.",
-                "Implemented SAP EAM for comprehensive asset management."
-              ]
-            },
-            {
-              company: "Automation Solutions Ltd.",
-              title: "Robotics Systems Engineer",
-              duration: "2014 - 2018",
-              description: [
-                "Designed and deployed automation systems for automotive manufacturing.",
-                "Led teams in troubleshooting complex control systems."
-              ]
-            }
-          ].map((exp, index) => (
-            <div key={index} style={{
-              backgroundColor: '#2a2a2a',
-              padding: '20px',
-              borderRadius: '10px',
-              color: '#ffffff',
-              border: '1px solid #3a3a3a'
-            }}>
-              <h3>{exp.company}</h3>
-              <p style={{ fontWeight: 'bold', marginTop: '5px' }}>{exp.title}</p>
-              <p style={{ color: '#a9a9a9', marginTop: '5px' }}>{exp.duration}</p>
-              <ul style={{ listStyle: 'disc', paddingLeft: '20px', marginTop: '15px' }}>
-                {exp.description.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
+        <section id="focus" className="border-y border-slate-800 bg-slate-950/60">
+          <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
+            <h2 className="text-2xl font-semibold text-white">Focus Areas</h2>
+            <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {focusAreas.map((area) => (
+                <div key={area} className="rounded-md border border-slate-800 bg-slate-900/70 p-4 text-slate-200">
+                  {area}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* Contact Section */}
-      <section style={{
-        padding: '60px 20px',
-        textAlign: 'center'
-      }}>
-        <h2 style={{ color: '#ffffff', marginBottom: '40px' }}>Contact Me</h2>
-        <form style={{
-          maxWidth: '600px',
-          margin: 'auto',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '20px'
-        }}>
-          <input type="text" placeholder="Your Name" required style={{
-            padding: '12px',
-            borderRadius: '8px',
-            border: '1px solid #3a3a3a'
-          }} />
-          <input type="email" placeholder="Your Email" required style={{
-            padding: '12px',
-            borderRadius: '8px',
-            border: '1px solid #3a3a3a'
-          }} />
-          <textarea rows="5" placeholder="Your Message" required style={{
-            padding: '12px',
-            borderRadius: '8px',
-            border: '1px solid #3a3a3a'
-          }}></textarea>
-          <button type="submit" style={{
-            backgroundColor: '#00f5ff',
-            border: 'none',
-            color: '#0d0d0d',
-            padding: '12px',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            transition: 'background-color 0.3s ease'
-          }} onMouseEnter={(e) => e.target.style.backgroundColor = '#00c2ff'}
-            onMouseLeave={(e) => e.target.style.backgroundColor = '#00f5ff'}>
-            Send Message
-          </button>
-        </form>
-      </section>
+        <section id="work" className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
+          <h2 className="text-2xl font-semibold text-white">Selected Work</h2>
+          <div className="mt-7 grid gap-5 lg:grid-cols-3">
+            {projects.map((project) => (
+              <article key={project.title} className="rounded-lg border border-slate-800 bg-slate-950 p-5">
+                <h3 className="text-lg font-semibold text-white">{project.title}</h3>
+                <p className="mt-3 leading-7 text-slate-300">{project.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
 
-      {/* Footer */}
-      <footer style={{
-        padding: '30px 20px',
-        textAlign: 'center',
-        backgroundColor: '#111111',
-        borderTop: '1px solid #333'
-      }}>
-        <p style={{ fontSize: '0.9em', color: '#666' }}>© {new Date().getFullYear()} Jae's Portfolio | All rights reserved</p>
+        <section id="contact" className="border-t border-slate-800 bg-slate-950/70">
+          <div className="mx-auto flex max-w-6xl flex-col gap-5 px-5 py-12 sm:px-8 md:flex-row md:items-center md:justify-between">
+            <div>
+              <h2 className="text-2xl font-semibold text-white">james.edmonds.dev</h2>
+              <p className="mt-2 text-slate-300">
+                Robotics, mechatronics, automation, and industrial controls portfolio.
+              </p>
+            </div>
+            <a
+              href="https://james.edmonds.dev/"
+              className="rounded-md border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-300 hover:text-cyan-200"
+            >
+              Visit Production Domain
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-slate-800 px-5 py-6 text-center text-sm text-slate-500">
+        © {new Date().getFullYear()} james.edmonds.dev
       </footer>
     </div>
   );
