@@ -81,13 +81,65 @@ const tools = [
   'Process automation interest',
 ];
 
+const safetyCards = [
+  {
+    title: 'Lockout / Tagout Awareness',
+    body: 'Supports safe maintenance practices before inspection, adjustment, troubleshooting, or repair work begins.',
+  },
+  {
+    title: 'Risk Reduction',
+    body: 'Focused on identifying equipment issues early before they become failures, downtime, or safety hazards.',
+  },
+  {
+    title: 'Clean, Controlled Work',
+    body: 'Maintains organized work areas, clear communication, and careful handoff between operations and maintenance.',
+  },
+  {
+    title: 'Reliable Restart Practices',
+    body: 'Verifies repairs, observes equipment behavior, and confirms safe return-to-service conditions.',
+  },
+];
+
+const safetyFocus = [
+  'Preventive maintenance discipline',
+  'Lockout/tagout awareness',
+  'Root-cause troubleshooting',
+  'Equipment inspection',
+  'Safe restart verification',
+  'Clear shift handoff communication',
+  'Downtime reduction',
+  'Production support under pressure',
+];
+
 const values = [
-  'Integrity',
-  'Accountability',
-  'Adaptability',
-  'Teamwork',
-  'Resilience',
-  'Calm execution',
+  {
+    title: 'Safety',
+    body: 'Protecting people, equipment, and production through careful work and good judgment.',
+  },
+  {
+    title: 'Integrity',
+    body: 'Keeping commitments clear and work traceable.',
+  },
+  {
+    title: 'Accountability',
+    body: 'Owning tasks from issue report through repair verification and handoff.',
+  },
+  {
+    title: 'Adaptability',
+    body: 'Adjusting as equipment, priority, or production conditions change.',
+  },
+  {
+    title: 'Teamwork',
+    body: 'Coordinating with operations, maintenance, and engineering without losing the details.',
+  },
+  {
+    title: 'Resilience',
+    body: 'Staying steady during downtime, restarts, and production pressure.',
+  },
+  {
+    title: 'Calm execution',
+    body: 'Working methodically when automated systems need fast, accurate support.',
+  },
 ];
 
 const education = {
@@ -99,11 +151,11 @@ function App() {
   return (
     <div className="min-h-screen bg-[#070908] text-stone-100">
       <header className="absolute inset-x-0 top-0 z-20">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
+        <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-5 py-5 sm:px-8">
           <a href="/" className="text-base font-semibold text-white sm:text-lg">
-            James Jr
+            James Edmonds Jr.
           </a>
-          <nav aria-label="Primary navigation" className="flex items-center gap-4 text-sm text-stone-200 sm:gap-6">
+          <nav aria-label="Primary navigation" className="flex items-center gap-4 text-xs text-stone-200 sm:gap-6 sm:text-sm">
             <a className="transition hover:text-cyan-200" href="#experience">
               Experience
             </a>
@@ -128,31 +180,33 @@ function App() {
           <div className="relative z-10 mx-auto flex min-h-[88svh] max-w-7xl items-center px-5 pb-16 pt-28 sm:px-8">
             <div className="max-w-3xl">
               <p className="mb-5 max-w-fit border-l-4 border-cyan-300 bg-black/30 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200">
-                Technical Operations | Crew Technology Support | Process Improvement
+                Safety-focused automation support | Reliability | Controls
               </p>
               <h1 className="text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
-                James Jr
+                James Edmonds Jr.
               </h1>
               <p className="mt-4 text-2xl font-semibold text-stone-100 sm:text-3xl">
                 Senior Mechatronics & Reliability Technician
               </p>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-200">
-                Operations-focused technical professional supporting large-scale automated systems, workflow continuity,
-                maintenance planning, SOP rollout, and cross-functional implementation work across Amazon and
-                PepsiCo/Gatorade operations.
+              <p className="mt-6 max-w-2xl text-2xl font-semibold leading-9 text-amber-100">
+                Automation support built around safety, uptime, and control.
+              </p>
+              <p className="mt-4 max-w-2xl text-lg leading-8 text-stone-200">
+                I help keep automated equipment running safely through preventive maintenance, troubleshooting, controls
+                support, and disciplined repair practices.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <a
-                  href="#experience"
-                  className="rounded-md bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
-                >
-                  View Experience
-                </a>
-                <a
                   href="#contact"
-                  className="rounded-md border border-stone-500 bg-black/20 px-5 py-3 text-sm font-semibold text-stone-100 transition hover:border-amber-300 hover:text-amber-200"
+                  className="rounded-md bg-amber-300 px-5 py-3 text-sm font-semibold text-stone-950 transition hover:bg-amber-200"
                 >
                   Contact
+                </a>
+                <a
+                  href="#experience"
+                  className="rounded-md border border-stone-500 bg-black/20 px-5 py-3 text-sm font-semibold text-stone-100 transition hover:border-emerald-300 hover:text-emerald-200"
+                >
+                  View Experience
                 </a>
               </div>
             </div>
@@ -161,18 +215,39 @@ function App() {
 
         <section className="border-y border-stone-800 bg-[#101411]">
           <div className="mx-auto grid max-w-7xl gap-6 px-5 py-12 sm:px-8 lg:grid-cols-3">
-            <div className="rounded-lg border border-stone-700 bg-stone-950 p-5">
+            <div className="rounded-lg border border-stone-700 bg-[#121715] p-5">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Environment</p>
-              <p className="mt-3 text-2xl font-semibold text-white">High-volume automated operations</p>
+              <p className="mt-3 text-2xl font-semibold text-white">Safe, reliable automated operations</p>
             </div>
-            <div className="rounded-lg border border-stone-700 bg-stone-950 p-5">
+            <div className="rounded-lg border border-stone-700 bg-[#121715] p-5">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-emerald-200">Focus</p>
               <p className="mt-3 text-2xl font-semibold text-white">Reliability, readiness, and continuity</p>
             </div>
-            <div className="rounded-lg border border-stone-700 bg-stone-950 p-5">
+            <div className="rounded-lg border border-stone-700 bg-[#121715] p-5">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-200">Location</p>
               <p className="mt-3 text-2xl font-semibold text-white">Atlanta Metro Area</p>
             </div>
+          </div>
+        </section>
+
+        <section id="safety" className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-200">Safety & Reliability</p>
+            <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">Safety-first maintenance mindset</h2>
+            <p className="mt-4 leading-8 text-stone-300">
+              Reliable automation starts with safe work, clear judgment, and disciplined maintenance practices.
+            </p>
+          </div>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            {safetyCards.map((card) => (
+              <article
+                key={card.title}
+                className="rounded-lg border border-stone-800 border-l-4 border-l-amber-300/70 bg-[#121715] p-5"
+              >
+                <h3 className="text-lg font-semibold text-white">{card.title}</h3>
+                <p className="mt-3 leading-7 text-stone-300">{card.body}</p>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -206,7 +281,7 @@ function App() {
             </div>
             <div className="mt-9 grid gap-5">
               {experience.map((job) => (
-                <article key={`${job.company}-${job.dates}`} className="rounded-lg border border-stone-800 bg-stone-950 p-5 sm:p-6">
+                <article key={`${job.company}-${job.dates}`} className="rounded-lg border border-stone-800 bg-[#121715] p-5 sm:p-6">
                   <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                     <div>
                       <h3 className="text-xl font-semibold text-white">{job.role}</h3>
@@ -242,7 +317,7 @@ function App() {
               The toolkit spans warehouse and production systems, maintenance planning platforms, automated handling
               equipment, and emerging AI-assisted workflows for troubleshooting and communication.
             </p>
-            <div className="mt-6 rounded-lg border border-stone-800 bg-stone-950 p-5">
+            <div className="mt-6 rounded-lg border border-stone-800 bg-[#121715] p-5">
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-200">Education</p>
               <p className="mt-3 text-xl font-semibold text-white">{education.credential}</p>
               <p className="mt-1 text-stone-300">{education.school}</p>
@@ -257,6 +332,25 @@ function App() {
           </div>
         </section>
 
+        <section className="border-y border-stone-800 bg-[#0d100f]">
+          <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[0.85fr_1.15fr]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-200">Maintenance Priorities</p>
+              <h2 className="mt-3 text-3xl font-bold text-white">Safety & reliability focus</h2>
+              <p className="mt-4 leading-8 text-stone-300">
+                Practical habits for keeping automated equipment stable, controlled, and ready for production.
+              </p>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {safetyFocus.map((item) => (
+                <div key={item} className="rounded-md border border-stone-800 bg-[#121715] p-4 font-medium text-stone-100">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="border-y border-stone-800 bg-[#101411]">
           <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[1fr_1.2fr]">
             <div>
@@ -265,8 +359,9 @@ function App() {
             </div>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {values.map((value) => (
-                <div key={value} className="rounded-md border border-stone-700 bg-stone-950 p-4 font-semibold text-stone-100">
-                  {value}
+                <div key={value.title} className="rounded-md border border-stone-700 bg-[#121715] p-4 text-stone-100">
+                  <h3 className="font-semibold text-white">{value.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-stone-300">{value.body}</p>
                 </div>
               ))}
             </div>
@@ -274,21 +369,26 @@ function App() {
         </section>
 
         <section id="contact" className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
-          <div className="grid gap-8 rounded-lg border border-stone-800 bg-stone-950 p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div className="grid gap-8 rounded-lg border border-stone-800 bg-[#121715] p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-200">Contact</p>
-              <h2 className="mt-3 text-3xl font-bold text-white">James Jr</h2>
+              <h2 className="mt-3 text-3xl font-bold text-white">James Edmonds Jr.</h2>
               <p className="mt-4 max-w-2xl leading-8 text-stone-300">
                 Senior mechatronics and reliability technician focused on technical operations, automated systems,
                 process improvement, and operational readiness.
               </p>
             </div>
-            <a
-              href="mailto:james@edmonds.dev"
-              className="rounded-md bg-amber-300 px-5 py-3 text-center text-sm font-semibold text-stone-950 transition hover:bg-amber-200"
-            >
-              Email James Jr
-            </a>
+            <div className="grid gap-4 lg:justify-items-end">
+              <p className="max-w-xs text-sm font-medium leading-6 text-amber-100 lg:text-right">
+                Built on safe work, steady troubleshooting, and reliable follow-through.
+              </p>
+              <a
+                href="mailto:james@edmonds.dev"
+                className="rounded-md bg-amber-300 px-5 py-3 text-center text-sm font-semibold text-stone-950 transition hover:bg-amber-200"
+              >
+                Email James Edmonds Jr.
+              </a>
+            </div>
           </div>
         </section>
       </main>
